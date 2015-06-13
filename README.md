@@ -7,14 +7,15 @@ Vim plugin for quick creating files.
 Suppose that you have added this magic spells into you `.vimrc`:
 
 ```vim
+" Note %s in strings?
 let g:file_magic_items = {
     \ 'apachevhost': '/etc/apache2/sites-available/%s.conf',
     \ 'sfview': 'app/Resources/views/%s.html.twig',
-    \ 'sfcontroller': 'src/AppBundle/Controller/%sController.php',
+    \ 'sfcontroller': 'src/AppBundle/Controller/%sController.php'
     \ }
 ```
 
-Then run command `:FileMagic sfview user/login` and you will get `app/Resources/views/user/login.html.twig`
+Now you can run command `:FileMagic sfview user/login` and you will get a file `app/Resources/views/user/login.html.twig` opened in Vim.
 
 ## Installation
 
@@ -28,7 +29,7 @@ git clone git://github.com/voronkovich/file-magic.vim ~/.vim/bundle/file-magic.v
 
 ### Using [vundle](https://github.com/gmarik/vundle)
 
-Add to vimrc:
+Add to your `.vimrc`:
 
 ``` vim
 Bundle 'voronkovich/file-magic.vim'
