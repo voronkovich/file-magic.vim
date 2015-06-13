@@ -1,4 +1,4 @@
-# Vim file magick
+# Vim file magic
 
 Vim plugin for quick creating files.
 
@@ -7,14 +7,14 @@ Vim plugin for quick creating files.
 Suppose that you have added this magic spells into you `.vimrc`:
 
 ```vim
-let g:file_magick_items = {
+let g:file_magic_items = {
     \ 'apachevhost': '/etc/apache2/sites-available/%s.conf',
     \ 'sfview': 'app/Resources/views/%s.html.twig',
     \ 'sfcontroller': 'src/AppBundle/Controller/%sController.php',
     \ }
 ```
 
-Then run command `:FileMagick sfview user/login` and you will get `app/Resources/views/user/login.html.twig`
+Then run command `:FileMagic sfview user/login` and you will get `app/Resources/views/user/login.html.twig`
 
 ## Installation
 
