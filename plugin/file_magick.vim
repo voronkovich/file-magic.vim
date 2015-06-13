@@ -4,7 +4,7 @@ endif
 
 let g:file_magick_loaded = 1
 
-if !exists('g:file_magick_entries')
+if !exists('g:file_magick_items')
     let g:file_magick_items = {}
 endif
 
