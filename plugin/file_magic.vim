@@ -16,6 +16,6 @@ command! -nargs=* -complete=customlist,file_magic#get_spells_keys FileMagic call
 command! -nargs=* FileMagicAddSpell call file_magic#add_spell(<f-args>)
 command! -nargs=1 -complete=customlist,file_magic#get_spells_keys FileMagicRemoveSpell call file_magic#remove_spell(<f-args>)
 
-if exists('g:file_magic_command_alias') && g:file_magic_command_alias
+if exists('g:file_magic_command_alias') && g:file_magic_command_alias != ''
     execute ':command! -nargs=* -complete=customlist,file_magic#get_spells_keys ' . g:file_magic_command_alias . ' call file_magic#create_file(<f-args>)'
 endif
