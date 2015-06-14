@@ -11,7 +11,8 @@ Suppose that you have added this magic spells into you `.vimrc`:
 let g:file_magic_spells = {
     \ 'apachevhost': '/etc/apache2/sites-available/%s.conf',
     \ 'sfview': 'app/Resources/views/%s.html.twig',
-    \ 'sfcontroller': 'src/AppBundle/Controller/%sController.php'
+    \ 'sfcontroller': 'src/AppBundle/Controller/%sController.php',
+    \ 'tmp': '/tmp/%s/%s.txt'
 \ }
 ```
 
