@@ -9,7 +9,7 @@ if !exists('g:file_magic_spells')
 endif
 
 if !exists('g:file_magic_open_command')
-    let g:file_magic_open_command = ':e'
+    let g:file_magic_open_command = 'e'
 endif
 
 command! -nargs=* -complete=customlist,file_magic#get_spells_keys FileMagic call file_magic#create_file(<f-args>)

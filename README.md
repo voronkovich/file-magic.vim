@@ -46,26 +46,27 @@ Bundle 'voronkovich/file-magic.vim'
 Setting a default command for opening a created file:
 
 ```vim
-g:file_magic_open_command = ':vsplit' " :e by default
+g:file_magic_open_command = 'vsplit' " 'e' by default
 ```
 
 Setting the `FileMagic` command alias:
 
 ```vim
-g:file_magic_command_alias = 'M'
+g:file_magic_command_alias = 'Create'
 ```
 
-Add callback function instead of spell string:
+Add callback function instead of a spell string:
 
 ```vim
 g:file_magic_spells = {
-    \ 'custom': '!callbackFunctionName'
+    \ 'note': '!createNote'
 \ }
 
 ...
 
-fun! callbackFunctionName(key, value)
-    return '/some/path/' . value . strftime('%FT%T%z')
+" a:key will be equal 'note'
+fun! createNote(key, title)
+    return printf('~/notes/%s-%s.txt', a:title, strftime('%FT%T%z'))
 endfun
 
 ```
