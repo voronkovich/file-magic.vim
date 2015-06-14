@@ -30,7 +30,7 @@ For creating parent directories this plugin requires [easydir](https://github.co
 ### Using [pathogen](https://github.com/tpope/vim-pathogen)
 
 ``` sh
-git clone git://github.com/voronkovich/file-magic.vim ~/.vim/bundle/file-magic.vim
+git clone https://github.com/voronkovich/file-magic.vim.git ~/.vim/bundle/file-magic.vim
 ```
 
 ### Using [vundle](https://github.com/gmarik/vundle)
