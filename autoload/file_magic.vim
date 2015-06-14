@@ -5,17 +5,17 @@ endif
 let g:file_magic_autoloaded = 1
 
 fun! file_magic#create_file(key, value)
-    execute g:file_magic_open_command . ' ' . s:file_magic#resolve_file()
+    execute g:file_magic_open_command . ' ' . file_magic#resolve_file(a:key, a:value)
 endfun
 
-fun! s:file_magic#resolve_file(key, value)
+fun! file_magic#resolve_file(key, value)
     if !has_key(g:file_magic_spells, a:key)
         throw "FileMagic: Spell with a key " . a:key . " does not exist"
     endif
 
     let spell = get(g:file_magic_spells, a:key)
 
-    if stridx(item, '!') == 0
+    if stridx(spell, '!') == 0
         let file = call(strpart(spell, 1), [ a:key, a:value ])
     else
         let file = printf(spell, a:value)
