@@ -41,6 +41,35 @@ Add to your `.vimrc`:
 Bundle 'voronkovich/file-magic.vim'
 ```
 
+## Configuration
+
+Setting a default command for opening a created file:
+
+```vim
+g:file_magic_open_command = ':vsplit' " :e by default
+```
+
+Setting the `FileMagic` command alias:
+
+```vim
+g:file_magic_command_alias = 'M'
+```
+
+Add callback function instead of spell string:
+
+```vim
+g:file_magic_spells = {
+    'custom': '!callbackFunctionName'
+\ }
+
+...
+
+fun! callbackFunctionName(key, value)
+    return '/some/path/' . value . strftime('%FT%T%z')
+endfun
+
+```
+
 ## License
 
 Copyright (c) Voronkovich Oleg.  Distributed under the same terms as Vim itself.
