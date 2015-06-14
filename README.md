@@ -15,7 +15,12 @@ let g:file_magic_spells = {
     \ }
 ```
 
-Now you can run command ```vim :FileMagic sfview user/login``` and you will get a file `app/Resources/views/user/login.html.twig` opened in Vim.
+Now you can run command:
+
+```vim
+:FileMagic sfview user/login```
+
+and you will get a file `app/Resources/views/user/login.html.twig` opened in Vim.
 
 ## Installation
 
