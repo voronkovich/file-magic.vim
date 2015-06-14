@@ -17,17 +17,17 @@ fun! file_magic#create_file(key, value)
         let file = printf(item, a:value)
     endif
 
-    execute ':e ' . file
+    execute g:file_magic_open_command . ' ' . file
 endfun
 
-fun! file_magic#add_item(key, value)
+fun! file_magic#add_spell(key, value)
     let g:file_magic_spells[a:key] = a:value
 endfun
 
-fun! file_magic#remove_item(key)
+fun! file_magic#remove_spell(key)
     remove(g:file_magic_spells, a:key)
 endfun
 
-fun! file_magic#get_items_keys(...)
+fun! file_magic#get_spells_keys(...)
     return keys(g:file_magic_spells)
 endfun
