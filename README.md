@@ -12,7 +12,7 @@ let g:file_magic_spells = {
     \ 'apachevhost': '/etc/apache2/sites-available/%s.conf',
     \ 'sfview': 'app/Resources/views/%s.html.twig',
     \ 'sfcontroller': 'src/AppBundle/Controller/%sController.php'
-    \ }
+\ }
 ```
 
 Now you can run command:
@@ -59,7 +59,7 @@ Add callback function instead of spell string:
 
 ```vim
 g:file_magic_spells = {
-    'custom': '!callbackFunctionName'
+    \ 'custom': '!callbackFunctionName'
 \ }
 
 ...
