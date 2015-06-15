@@ -16,13 +16,13 @@ let g:file_magic_spells = {
 \ }
 ```
 
-Now you can run command:
+Now if you run a command:
 
 ```vim
 :FileMagic sfview user/login
 ```
 
-and you will get a file `app/Resources/views/user/login.html.twig` opened in Vim.
+you will get a file `app/Resources/views/user/login.html.twig` opened in the Vim.
 
 ## Installation
 
@@ -60,13 +60,13 @@ Add callback function instead of a spell string:
 
 ```vim
 g:file_magic_spells = {
-    \ 'note': '!createNote'
+    \ 'note': '!CreateNote'
 \ }
 
 ...
 
 " a:key will be equal 'note'
-fun! createNote(key, title)
+fun! CreateNote(key, title)
     return printf('~/notes/%s-%s.txt', a:title, strftime('%FT%T%z'))
 endfun
 
